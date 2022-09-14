@@ -7,8 +7,8 @@ import os
 from twilio.rest import Client
 from requests_html import HTMLSession
 
-account_sid = 'ACf65df4da9e481882ab9469bded3e2569'
-auth_token = 'd97052ee16870366364931702befc7df'
+account_sid = 'XXXXXXXXXXXXXXXXXXX'
+auth_token = 'XXXXXXXXXXXXXXXXXXX'
 client = Client(account_sid, auth_token)
 
 def run():
@@ -26,8 +26,8 @@ def run():
         message = client.messages \
             .create(
                 body = 'There are %d seats out of %d' % (int1, int2),
-                from_ = '+19514946034',
-                to = '+14806167535'
+                from_ = '(XXX)-XXX-XXXX',
+                to = '(XXX)-XXX-XXXX'
             )
 
 schedule.every(10).seconds.do(run)
